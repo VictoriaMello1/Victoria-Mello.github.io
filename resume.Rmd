@@ -1,0 +1,13 @@
+---
+title: "Victoria Mello's Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+### About
+My name is Victoria Mello, and I am a Masters in Public Health student in the Sociomedical Sciences department at Columbia University Mailman School of Public Health studying research methods and applications. This website includes information such as my academic and professional history as well as some of my interests and passions!
+
+
+![](images/gradpic.jpg)
