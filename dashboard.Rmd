@@ -1,0 +1,120 @@
+---
+title: "NYC Resturant Health Violations Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+
+data("rest_inspec")
+
+
+# Cleaning the data before plotting (filtering and/or sampling)
+rest_inspec_clean =
+  rest_inspec %>%
+  mutate(year = as.integer(format(grade_date, "%Y")),
+         month = month(grade_date, label = TRUE),
+         cuisine_description = str_replace(cuisine_description, "CafÃ©/Coffee/Tea", "Cafe")) %>% 
+    select(grade, critical_flag, boro, cuisine_description, year, month, score) %>%
+  drop_na(grade) 
+
+view(rest_inspec_clean)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Line Plot
+
+```{r}
+line_plot <- rest_inspec_clean %>%
+  filter(year >= 2013 & year <= 2017, !boro %in% c("Missing", "")) %>%
+  group_by(boro, year) %>%
+  summarize(mean_score = mean(score)) %>%
+  plot_ly(
+    x = ~year,
+    y = ~mean_score,
+    color = ~boro,
+    type = "scatter",
+    mode = "lines+markers"
+  ) %>%
+layout(
+    title = "Average Resturant Inspection Score by Borough Across Years (2013-2017)",
+    xaxis = list(
+      title = "Year",
+      tickmode = "array",
+      tickvals = c(2013, 2014, 2015, 2016, 2017),
+      dtick = 1
+    ),
+    yaxis = list(title = "Average Inspection Score")
+  )
+
+line_plot
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Box Plot 
+
+```{r}
+rest_inspec_2017 <- rest_inspec_clean %>%
+  filter(year == 2017, !boro %in% c("Missing", ""))
+
+# Create the box plot using Plotly
+plot_ly(data = rest_inspec_2017, 
+        y = ~score,
+        x = ~boro,
+        color = ~boro,
+        type = "box",
+        colors = "viridis") %>% 
+  layout(title = "Distribution of Restaurant Inspection Scores by Borough, 2017",
+         xaxis = list(title = "Borough"),
+         yaxis = list(title = "Restaurant Inspection Score"))
+
+```
+
+### Bar Chart
+
+```{r}
+# Filter the data for the year 2017
+rest_inspec_2017 <- rest_inspec_clean %>%
+  filter(year == 2017)
+
+# Calculate the total number of violations by cuisine type for 2017
+violations_by_cuisine_2017 <- rest_inspec_2017 %>%
+  group_by(cuisine_description, critical_flag) %>%
+  summarize(violation_count = n()) %>%
+  pivot_wider(names_from = critical_flag, values_from = violation_count, values_fill = 0) %>%
+  mutate(total_violations = `Critical` + `Not Critical`)
+
+# Calculate the percentage of critical violations
+percent_violation <- violations_by_cuisine_2017 %>%
+  mutate(
+    percentage_critical = (`Critical` / total_violations) * 100)
+view(percent_violation)
+
+# Create the bar chart using Plotly
+bar_chart <- percent_violation %>%
+  mutate(cuisine_description = fct_reorder(cuisine_description, percentage_critical)) %>%
+  plot_ly(
+    x = ~percentage_critical,
+    y = ~cuisine_description,
+    type = "bar",
+    orientation = 'h'
+  ) %>%
+  layout(
+    title = "Percentage of Critical Violations by Cuisine Type (2017)",
+    xaxis = list(title = "Percentage of Critical Violations"),
+    yaxis = list(title = "Cuisine Type")
+  )
+
+bar_chart
+```
+
