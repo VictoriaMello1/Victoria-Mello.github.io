@@ -85,36 +85,27 @@ plot_ly(data = rest_inspec_2017,
 ```{r}
 # Filter the data for the year 2017
 rest_inspec_2017 <- rest_inspec_clean %>%
-  filter(year == 2017)
+  filter(year == 2017, !boro %in% c("Missing", ""))
 
-# Calculate the total number of violations by cuisine type for 2017
-violations_by_cuisine_2017 <- rest_inspec_2017 %>%
-  group_by(cuisine_description, critical_flag) %>%
-  summarize(violation_count = n()) %>%
-  pivot_wider(names_from = critical_flag, values_from = violation_count, values_fill = 0) %>%
-  mutate(total_violations = `Critical` + `Not Critical`)
-
-# Calculate the percentage of critical violations
-percent_violation <- violations_by_cuisine_2017 %>%
-  mutate(
-    percentage_critical = (`Critical` / total_violations) * 100)
-view(percent_violation)
-
-# Create the bar chart using Plotly
-bar_chart <- percent_violation %>%
-  mutate(cuisine_description = fct_reorder(cuisine_description, percentage_critical)) %>%
+# Create a bar chart
+grade_bar_chart <- rest_inspec_2017 %>%
+  group_by(boro, grade) %>%
+  summarize(count = n()) %>%
+  mutate(text_label = str_c("Borough:", boro, "<br>Inspection Grade: ", grade, "<br>Number of Resturants:")) %>%
   plot_ly(
-    x = ~percentage_critical,
-    y = ~cuisine_description,
+    x = ~boro,
+    y = ~count,
+    color = ~grade,
+    text = ~text_label,
     type = "bar",
-    orientation = 'h'
-  ) %>%
+    colors = "viridis") %>%
   layout(
-    title = "Percentage of Critical Violations by Cuisine Type (2017)",
-    xaxis = list(title = "Percentage of Critical Violations"),
-    yaxis = list(title = "Cuisine Type")
+    title = "Distribution of Restaurant Inspection Grades by Borough, 2017",
+    xaxis = list(title = "Borough"),
+    yaxis = list(title = "Number of Resturants"),
+    barmode = "stack"
   )
 
-bar_chart
+grade_bar_chart
 ```
 
