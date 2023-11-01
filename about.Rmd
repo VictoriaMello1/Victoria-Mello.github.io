@@ -7,7 +7,7 @@ output:
 ---
 
 ### About
-My name is Victoria Mello, and I am a Masters in Public Health student in the Sociomedical Sciences department at Columbia University Mailman School of Public Health studying research methods and applications. This website includes information such as my academic and professional history as well as some examples of interactive data visualizations I made using [plotly](dashboard.html)!
+My name is Victoria Mello, and I am a Masters in Public Health student in the Sociomedical Sciences department at Columbia University Mailman School of Public Health studying research methods and applications. This website includes information such as my academic and professional history as well as some examples of interactive data visualizations I made using plotly which can be found on my [dashboard](dashboard.html)!
 
 
 ![](images/gradpic.jpg)
