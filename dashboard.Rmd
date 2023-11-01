@@ -88,7 +88,7 @@ rest_inspec_2017 <- rest_inspec_clean %>%
 grade_bar_chart <- rest_inspec_2017 %>%
   group_by(boro, grade) %>%
   summarize(count = n()) %>%
-  mutate(text_label = str_c("Borough:", boro, "<br>Inspection Grade: ", grade, "<br>Number of Resturants:")) %>%
+  mutate(text_label = str_c("Borough: ", boro, "<br>Inspection Grade: ", grade, "<br>Number of Resturants: ", count)) %>%
   plot_ly(
     x = ~boro,
     y = ~count,
@@ -98,7 +98,8 @@ grade_bar_chart <- rest_inspec_2017 %>%
     colors = "viridis") %>%
   layout(xaxis = list(title = "Borough"),
     yaxis = list(title = "Number of Resturants"),
-    barmode = "stack")
+    barmode = "stack",
+    legend = list(title = "Inspection Grade"))
 
 grade_bar_chart
 ```
