@@ -11,7 +11,7 @@ navbar:
       href: QGIS.html
     - text: "Dashboard"
       href: dashboard.html
-    - text: "Final Project: NYC Rat Analysis"
+    - text: "NYC Rat Analysis"
       href: https://nn2477.github.io/p8105-fp-rats.github.io/index.html
     - icon: fa-envelope fa-lg
       href: mailto:<vsm2118@cumc.columbia.edu>
