@@ -11,10 +11,9 @@ output:
 
 ![](images/bi_moran.png)
 
-
+![](images/covid_deaths.png)
 ![](images/clusters.png)
 
-![](images/covid_deaths.png)
 
 #### Case Study: Soho Cholera Outbreak  
 ![](images/Cholera.png)
