@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-#### Case Study: COVID-19 Deaths and Poverty in NYC 
+### Case Study: COVID-19 Deaths and Poverty in NYC 
 ![](images/bivariate.png) 
 
 ![](images/bi_moran.png)
@@ -14,12 +14,11 @@ output:
 ![](images/covid_deaths.png)
 ![](images/clusters.png)
 
-
-#### Case Study: Soho Cholera Outbreak  
+### Case Study: Soho Cholera Outbreak  
 ![](images/Cholera.png)
 ![](images/KDE_map.png)
 
-#### Case Study: New Jersey Emissions 
+### Case Study: New Jersey Emissions 
 ![](images/emissions.png)
 
 ![](images/TRI_release.png)
