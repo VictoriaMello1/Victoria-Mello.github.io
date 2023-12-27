@@ -7,6 +7,8 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html
+    - text: "QGIS"
+      href: QGIS.html
     - text: "Dashboard"
       href: dashboard.html
     - icon: fa-envelope fa-lg
