@@ -7,7 +7,8 @@ output:
 ---
 
 ### About
-My name is Victoria Mello, and I am a Masters in Public Health student in the Sociomedical Sciences department at Columbia University Mailman School of Public Health studying research methods and applications. This website includes my [resume](resume.html) as well as some examples of spatial analyses I have created in [QGIS](QGIS.html). This website was created using RStudio and some examples of interactive data visualizations I made using plotly which can be found on my [dashboard](dashboard.html)! 
+My name is Victoria Mello, and I am a Masters in Public Health student in the Sociomedical Sciences department at Columbia University Mailman School of Public Health studying research methods and applications. This website includes my [resume](resume.html) as well as some examples of spatial analyses I have created in [QGIS](QGIS.html). This website as well as my [final project website](https://nn2477.github.io/p8105-fp-rats.github.io/index.html) were created using RStudio.
+Lastly, some examples of interactive data visualizations I made using plotly can be found on my [dashboard](dashboard.html)! 
 
 ![](images/gradpic.jpg)
 
