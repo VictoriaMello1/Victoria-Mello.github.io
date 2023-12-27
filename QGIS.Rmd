@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-#### Analysis of COVID-19 Death Rate and Poverty in NYC 
+#### Case Study: COVID-19 Deaths and Poverty in NYC 
 ![](images/bivariate.png) 
 
 ![](images/bi_moran.png)
