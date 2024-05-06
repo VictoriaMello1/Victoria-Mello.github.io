@@ -24,6 +24,7 @@ output:
 * Certificate in Research Methods
 * GPA: 4.0
 * Expected Graduation: May 2024
+* [Read My Masters Thesis](Mello_Thesis_MPH.pdf)
 
 ##### Brown University
 * Providence, RI
@@ -33,6 +34,10 @@ output:
 * [Read My Honors Thesis](VMthesis.pdf)
 
 ### Experience
+
+##### Columbia Mailman, Graduate Research Assistant  |  New York, NY | January 2024 – May 2024
+* Utilized SPSS for analysis of primary survey data from a novel undergraduate naloxone training program, integrating Theory of Planned Behavior (TPB) to inform analysis and prepare results for write-up and publication.
+* Contributed to Dr. Shelton's dissemination and implementation science projects through weekly team meetings, scoring survey items, conducting data wrangling and exploratory analyses and literature reviews, as well as applying health behavior theory.
 
 ##### Abt Associates, Social Impact Research and Consulting Internship  |  New York, NY | June 2023 – August 2023
 * Worked collaboratively with multidisciplinary teams on two large-scale program evaluations contracted by the US government, participating in tasks related to data analysis, research, and drafting various report sections.
@@ -80,5 +85,6 @@ output:
 * Managing Public Health Non-Profits (grant writing)
 * Qualitative Research Methods (learning NVivo)
 * Quantitative Research Methods (learning SPSS)
-* Epidemiology for Observational Studies 
-* Determinants of Health 
+* Designing Public Health Interventions (program implementation)
+* Health Promotion Theory
+
