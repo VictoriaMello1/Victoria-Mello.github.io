@@ -85,6 +85,7 @@ output:
 * Managing Public Health Non-Profits (grant writing)
 * Qualitative Research Methods (learning NVivo)
 * Quantitative Research Methods (learning SPSS)
+* Community Based Participatory Research (CBPR)
 * Designing Public Health Interventions (program implementation)
 * Health Promotion Theory
 

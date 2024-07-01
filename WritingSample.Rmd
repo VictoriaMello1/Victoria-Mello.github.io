@@ -1,5 +1,5 @@
 ---
-title: "Victoria Mello's Website"
+title: "Writing Sample"
 output: 
   html_document:
     toc: true
@@ -11,9 +11,7 @@ output:
   }
 </style>
 
-### About
-Hello! My name is Victoria Mello, and I am a recent graduate of Columbia University's Mailman School of Public Health, where I earned my Master of Public Health in Sociomedical Sciences with a certificate in research methods, in May 2024. My academic and professional pursuits center on utilizing mixed-methods approaches to thoroughly analyze and, most importantly, address complex public health issues. Driven by a commitment to work collectively toward eliminating deeply rooted health disparities, I am particularly passionate about programs and policies that center social, economic, and environmental justice as essential pathways to achieving true health equity.
+### Prompt
+I wrote this final paper for my Health Promotion and Theory course that I took during my MPH program. The prompt asked us to design a communication intervention based in health promotion theory that will garner community support in East Harlem and convince residents that the Overdose Prevention Center (OPC) in their neighborhood is a safe and effective way to reduce opioid overdoses, save lives, and benefits all members of the community. We were required to outline the impact of the opioid epidemic in NYC as well as design a multi-level campaign that targeted at least two levels of the social ecological model by utilizing constructs from various health behavior theories. I genuinely enjoyed learning more about the East Harlem community and brainstorming potential strategies to increase local support for the OPC while researching and writing this piece, so I hope you enjoy reading it as much as I enjoyed writing it!
 
-This website includes various information about me such as my [resume](resume.html) as well as some examples of spatial analyses I have created using [QGIS](QGIS.html). This website, along with my [final project](https://nn2477.github.io/p8105-fp-rats.github.io/index.html) NYC rat analysis website, were created using RStudio and GitHub for assignments in a 'Data Science' course I took during my masters program. Some examples of basic interactive data visualizations I created with plotly can be found on my [dashboard](dashboard.html) as well. Now sit back, relax, and please enjoy exploring my personal website!
-
- 
+[Read my Health Promotion Paper Here!](Health_Behavior_Theory.pdf)
