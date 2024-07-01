@@ -15,7 +15,7 @@ output:
 ![](images/clusters.png)
 
 ### Case Study: Soho Cholera Outbreak  
-![](images/Cholera.png)
+![](images/Cholera.png) 
 ![](images/KDE_map.png)
 
 ### Case Study: New Jersey Emissions 
